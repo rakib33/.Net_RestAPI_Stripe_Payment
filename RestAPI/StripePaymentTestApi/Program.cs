@@ -1,9 +1,13 @@
 
+using StripePaymentTestApi.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
 
+// IOptions 
+builder.Services.Configure<StripeCredential>(builder.Configuration.GetSection("StripeKey"));
 
 builder.Services.AddResponseCaching();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
