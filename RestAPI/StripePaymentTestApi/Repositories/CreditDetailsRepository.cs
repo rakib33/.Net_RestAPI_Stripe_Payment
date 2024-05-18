@@ -6,9 +6,11 @@ namespace StripePaymentTestApi.Repositories
 {
     public class CreditDetailsRepository : ICreditDetails
     {
-        private readonly StripeCredential _stripeCredential;      
-        public CreditDetailsRepository(IOptions<StripeCredential> options) { 
+        private readonly StripeCredential _stripeCredential;   
+        private readonly IJsonConfig _jsonConfig;
+        public CreditDetailsRepository(IOptions<StripeCredential> options , IJsonConfig jsonConfig) { 
          _stripeCredential = options.Value;
+         _jsonConfig = jsonConfig;
         }      
 
         public Task<bool> IsValidCreditDetails(CreditDetails creditDetails)
