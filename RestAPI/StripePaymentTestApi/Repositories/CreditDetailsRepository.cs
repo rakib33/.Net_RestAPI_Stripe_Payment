@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Options;
+﻿using Microsoft.Azure.Cosmos;
+using Microsoft.Extensions.Options;
+using Newtonsoft.Json;
 using StripePaymentTestApi.Interfaces;
 using StripePaymentTestApi.Models;
 
@@ -13,14 +15,23 @@ namespace StripePaymentTestApi.Repositories
          _jsonConfig = jsonConfig;
         }      
 
-        public Task<bool> IsValidCreditDetails(CreditDetails creditDetails)
+        public async Task<bool> IsValidCreditDetails(CreditDetails creditDetails)
         {
-            throw new NotImplementedException();
+            return true;
         }
 
-        public Task<bool> SaveCreditDetails(CreditDetails creditDetails)
+        public async Task<bool> SaveCreditDetails(CreditDetails creditDetails)
         {
-            throw new NotImplementedException();
+            try
+            {
+                string jsonData = JsonConvert.SerializeObject(creditDetails, Formatting.Indented);
+                 _jsonConfig.SaveDataintoJsonFile(jsonData);
+                return  true;
+            }
+            catch (Exception)
+            {
+              return false;
+            }
         }
     }
 }

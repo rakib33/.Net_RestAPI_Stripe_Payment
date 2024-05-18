@@ -1,17 +1,36 @@
 ﻿using StripePaymentTestApi.Interfaces;
+using StripePaymentTestApi.utils;
 
 namespace StripePaymentTestApi.Repositories
 {
     public class JsonConfigRepository : IJsonConfig
     {
-        public Task<bool> IsJsonFileExists()
+      
+        private readonly string _filePath;   
+        
+        public JsonConfigRepository()
         {
-            throw new NotImplementedException();
+            _filePath = JsonConfig.GetJsonFilepath();
+        }
+        public bool IsJsonFileExists()
+        {
+            //// Ensure the file exists
+            if (!File.Exists(_filePath))           
+                return true;
+            return false;
         }
 
-        public Task<bool> SaveDataintoJsonFile()
+        public bool SaveDataintoJsonFile(string data)
         {
-            throw new NotImplementedException();
+            try
+            {
+                File.WriteAllText(_filePath, data);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
     }
 }
