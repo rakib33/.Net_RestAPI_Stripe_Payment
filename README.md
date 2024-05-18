@@ -1,1 +1,1 @@
-# .Net_RestAPI_Stripe_Payment
+# .Net 6 Rest API Stripe Payment gateway Test
