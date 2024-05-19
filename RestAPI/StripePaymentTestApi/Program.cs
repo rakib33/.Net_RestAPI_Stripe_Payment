@@ -3,6 +3,7 @@ using StripePaymentTestApi.Interfaces;
 using StripePaymentTestApi.Models;
 using StripePaymentTestApi.Repositories;
 using StripePaymentTestApi.Services;
+using StripePaymentTestApi.utils;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +19,7 @@ builder.Services.AddScoped<IJsonConfig, JsonConfigRepository>();
 builder.Services.AddScoped<ICreditDetails, CreditDetailsRepository>();
 
 builder.Services.AddScoped<UserCreditDetailsService>();
+builder.Services.AddSingleton<StripeCardManager>();
 
 //possible object cycle avoiding 
 builder.Services.AddControllers().AddJsonOptions(x =>

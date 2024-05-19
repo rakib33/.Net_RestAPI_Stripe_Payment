@@ -24,7 +24,8 @@ namespace StripePaymentTestApi.Repositories
         {
             try
             {
-                File.WriteAllText(_filePath, data);
+                //.WriteAllText
+                File.AppendAllText(_filePath, data);
                 return true;
             }
             catch (Exception ex)

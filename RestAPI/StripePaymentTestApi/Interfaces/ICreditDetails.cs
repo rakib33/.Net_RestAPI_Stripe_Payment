@@ -4,7 +4,7 @@ namespace StripePaymentTestApi.Interfaces
 {
     public interface ICreditDetails
     {
-      Task<bool> SaveCreditDetails(CreditDetails creditDetails);
-      Task<bool> IsValidCreditDetails(CreditDetails creditDetails);    
+      Task<bool> SaveCreditDetails(CardDetails creditDetails);
+      Task<bool> IsValidCreditDetails(CardDetails creditDetails);    
     }
 }

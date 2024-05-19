@@ -13,7 +13,7 @@ namespace StripePaymentTestApi.Services
          _creditDetails = creditDetails;
         }
 
-        public async Task<string> SaveCreditDetailsInfoToJsonFile(CreditDetails creditDetails)
+        public async Task<string> SaveCreditDetailsInfoToJsonFile(CardDetails creditDetails)
         {
             if(await _creditDetails.IsValidCreditDetails(creditDetails))
             {

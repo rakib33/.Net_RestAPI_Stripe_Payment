@@ -20,7 +20,7 @@ namespace StripePaymentTestApi.Controllers
         
 
         [HttpPost("CreditDetails")]
-        public async Task<IActionResult> CreditDetails([FromForm] CreditDetails creditDetails)
+        public async Task<IActionResult> CreditDetails([FromForm] CardDetails creditDetails)
         {
             string result = await _userCreditDetailsService.SaveCreditDetailsInfoToJsonFile(creditDetails);
 
