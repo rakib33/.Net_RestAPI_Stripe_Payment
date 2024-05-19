@@ -52,3 +52,10 @@ This sample project contains stripe payment system test using .Net core rest api
      }
 
   ```
+
+
+## References
+
+- https://docs.stripe.com/testing
+- https://docs.stripe.com/api
+- https://stackoverflow.com/questions/69099948/how-to-check-stripe-card-is-valid-and-is-still-working-without-making-any-paymen 
