@@ -251,7 +251,8 @@ builder.Services.AddSingleton<StripeCardManager>();
   
   ![image](https://github.com/rakib33/.Net_RestAPI_Stripe_Payment/assets/10026710/ba2af62d-beee-4e0c-9fa6-5f0068028e2c)
 
-
+- Data is saved on json file on this location . [C:\Users\<YourPcName>\AppData\Local\StripePaymentApp]
+  
 ## References
 
 - https://docs.stripe.com/testing
