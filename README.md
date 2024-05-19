@@ -243,6 +243,9 @@ builder.Services.AddSingleton<StripeCardManager>();
 
 - We will get this key uisng IOptions patterns already configure in Program.cs file 
 
+- From stripe documents we will check to valid payment with free of cost.
+  ![image](https://github.com/rakib33/.Net_RestAPI_Stripe_Payment/assets/10026710/cfbc2367-91cf-4ce2-ac77-6039fcd39be1)
+
 - Now run the app using swagger and execute the api method.
 
    ![image](https://github.com/rakib33/.Net_RestAPI_Stripe_Payment/assets/10026710/7d66b2c2-669b-4d2e-842d-b9b38fce15bc)
@@ -268,6 +271,8 @@ builder.Services.AddSingleton<StripeCardManager>();
 - https://docs.stripe.com/testing
 - https://docs.stripe.com/api
 - https://stackoverflow.com/questions/69099948/how-to-check-stripe-card-is-valid-and-is-still-working-without-making-any-paymen 
-
+- https://support.stripe.com/questions/check-if-a-card-is-valid-without-a-charge
+- https://docs.stripe.com/testing?lang=dotnet
+    
 ## Question Asked
 - https://github.com/stripe/stripe-android/issues/819
