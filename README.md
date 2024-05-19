@@ -252,7 +252,17 @@ builder.Services.AddSingleton<StripeCardManager>();
   ![image](https://github.com/rakib33/.Net_RestAPI_Stripe_Payment/assets/10026710/ba2af62d-beee-4e0c-9fa6-5f0068028e2c)
 
 - Data is saved on json file on this location . [C:\Users\<YourPcName>\AppData\Local\StripePaymentApp]
-  
+
+- When data save is failed for any internal reason, user get this response message with http status code 500.
+
+  ![image](https://github.com/rakib33/.Net_RestAPI_Stripe_Payment/assets/10026710/07ba7df4-0213-42f9-ad7f-8fb7ee525c1f)
+
+- For invalid credit information we return status code 400 with message.
+
+  ![image](https://github.com/rakib33/.Net_RestAPI_Stripe_Payment/assets/10026710/b24c8234-8fea-442c-bf11-a4426a9df9a4)
+
+- Also we can return any custom response in web api.
+
 ## References
 
 - https://docs.stripe.com/testing
